@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>M&UumlVTECH Homepage</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/index.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Leap Motion -->
+    <script src=http://js.leapmotion.com/leap-0.6.3.js ></script>
+    <script src=http://js.leapmotion.com/leap-plugins-0.1.8.js ></script>
+    <script src=http://mrdoob.github.io/three.js/build/three.min.js ></script>
+    <script src=http://mrdoob.github.io/three.js/examples/js/controls/TrackballControls.js ></script>
+    <script src=http://mrdoob.github.io/three.js/examples/js/libs/stats.min.js ></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="top" class="header-index">
+        <div class="text-vertical-center">
+            <img src="../img/muvtech-illusion.png" alt="M&UumlVTECH Illusion">
+            <br>
+            <a href="#about" class="btn btn-light btn-lg">About</a>
+            <a href="illusion.html" class="btn btn-light btn-lg">Projects</a>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="about-logo">
+                        <img src="../img/about/about-illusion.png" alt="About Illusion">
+                    </div>
+                    <div class="style-top">
+                        <p class="lead"><img src="../img/team/james.jpg" alt="james"> | James Nelson | Graphic Designer | <a href="http://www.shootwithjames.com"><img src="../img/logo/website.png" alt="website"></a></p>
+                        <p class="lead"><img src="../img/team/tiffany.jpg" alt="tiffany"> | Tiffany Tjahjadi | Front-End Developer | <a href="https://github.com/tashleyy"><img src="../img/logo/github.png" alt="github"></a></p>
+                        <p class="lead"><img src="../img/team/jonathan.jpg" alt="jonathan"> | Jonathan Romero | HTML/CSS Developer | <a href="https://github.com/TheCityOfRome"><img src="../img/logo/github.png" alt="github"></a></p>
+                        <p class="lead"><img src="../img/team/ray.jpg" alt="ray"> | Ryan Hsieh | Full Stack Developer | <a href="https://github.com/ssbomb"><img src="../img/logo/github.png" alt="github"></a></p>
+                        <p class="lead"> Kai Perez | Hardware Photon Specialist</p>
+                        <img src="../img/about/bg-stylebottom.png" alt="Style Bottom">
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <h4><strong>M&UumlVTECH</strong>
+                    </h4>
+                    <p>1933 SOUTH BROADWAY<br>LOS ANGELES CA</p>
+                    <ul class="list-unstyled">
+                        <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="mailto:iot.dreamers@gmail.com">iot.dreamers@gmail.com</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <hr class="small">
+                    <p class="text-muted">Copyright &copy; M&UumlVTECH 2015</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
+</body>
+
+</html>

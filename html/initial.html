@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+
+<html>
+
+  <head>
+    <title>index.html</title>
+    <script src=http://js.leapmotion.com/leap-0.6.4.js ></script>
+    <script src=http://js.leapmotion.com/leap-plugins-0.1.11.js ></script>
+    <script src=http://mrdoob.github.io/three.js/build/three.min.js ></script>
+    <script src=http://mrdoob.github.io/three.js/examples/js/controls/TrackballControls.js ></script>
+    <script src=http://mrdoob.github.io/three.js/examples/js/libs/stats.min.js ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>    
+    <link href="../css/index.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="addButton" id="addSquare">
+      <p class="addText"> ADD </p>
+    </div>
+    <div class="addButton" id="addCircle">
+      <p class="addText"> ADD </p>
+    </div>
+    <script src="../js/interface.js"></script>
+  </body>
+
+  <script>
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF'.split('');
+        var color = '#';
+        for (var i = 0; i < 6; i++ ) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+    $("#addSquare").click(function() {
+      $("body").append("<div class=\"container\"><div class=\"box square\" style=\"background-color:" + getRandomColor() + "; left:" + Math.floor(Math.random() * 800 + 100) + "px; top:" + Math.floor(Math.random() * 400 + 50) + "px;\"></div></div>");
+      $(".box").draggable();
+    });
+    $("#addCircle").click(function() {
+      $("body").append("<div class=\"container\"><div class=\"box circle\" style=\"background-color:" + getRandomColor() + "; left:" + Math.floor(Math.random() * 800 + 100) + "px; top:" + Math.floor(Math.random() * 400 + 50) + "px;\"></div></div>");
+      $(".box").draggable();
+    });
+  </script>
+
+</html>
